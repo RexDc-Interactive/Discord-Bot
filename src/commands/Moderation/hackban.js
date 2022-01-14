@@ -21,7 +21,7 @@ class HackBan extends Command {
 			userPermissions: ['BAN_MEMBERS'],
 			botPermissions: [ 'SEND_MESSAGES', 'EMBED_LINKS', 'BAN_MEMBERS'],
 			description: 'Ban a user not in a server.',
-			usage: 'ban <user> [reason] [time]',
+			usage: 'hackban <user> [reason] [time]',
 			cooldown: 5000,
 			examples: ['hackban username spamming chat 4d', 'hackban username raiding'],
 		});
@@ -39,7 +39,7 @@ class HackBan extends Command {
 		if (settings.ModerationClearToggle && message.deletable) message.delete();
 
 		// check if a user was entered
-		if (!message.args[0]) return message.channel.error('misc:INCORRECT_FORMAT', { EXAMPLE: settings.prefix.concat(message.translate('moderation/ban:USAGE')) }).then(m => m.timedDelete({ timeout: 10000 }));
+		if (!message.args[0]) return message.channel.error('misc:INCORRECT_FORMAT', { EXAMPLE: settings.prefix.concat(message.translate('moderation/hackban:USAGE')) }).then(m => m.timedDelete({ timeout: 10000 }));
 
 		// Get user and reason
 		const reason = message.args[1] ? message.args.splice(1, message.args.length).join(' ') : message.translate('misc:NO_REASON');
