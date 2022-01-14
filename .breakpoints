@@ -1,0 +1,12 @@
+{
+  "files": {
+    "src/commands/Moderation/hackban.js": [
+      {
+        "id": "4dad65ee-7268-4c76-b75c-329d6d47597b",
+        "line": 50,
+        "version": 115,
+        "index": 1671
+      }
+    ]
+  }
+}
